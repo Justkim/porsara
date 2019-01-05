@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row mt-5" >
+        <div class="col-lg-2">
+
+
+
+            <!--<img src= data-toggle="popover" data-trigger="hover" data-content="Some content" class="rounded-circle float-right" style="height: 140px; width: 140px" alt="...">-->
+
+</div>
+
+        <!--<h3 class="text-center menu">{{ question.created_by }}</h3>-->
+
+
+        <div class="col-lg-8">
+            <div class="jumbotron" style="background-color:#f4decb;">
+                  <h2 class="menu text-right"> {{ question.created_by}} پرسید: </h2>
+            </br>
+            <h2 class="menu text-right">{{ question.title }}</h2>
+            </br>
+
+                 <h3 class="text text-right">{{ question.content }}</h3>
+                    <a href="{% url 'new_answer' question.pk %}" class="btn btn-outline-dark text-left " >پاسخ به پرسش</a>
+                 </div>
+
+                {% for answer in answers %}
+                   <div class="jumbotron" style="background-color:#f4decb;">
+                        <h2 class="menu text-right"> {{ answer.created_by}} جواب داد: </h2>
+                  <h3 class="text text-right">{{ answer.content }}</h3>
+                   </div>
+                {% endfor %}
+
+
+
+
+
+
+
+        </div>
+        <div class col-lg-2></div>
+
+        <div>
+
+    </div>
+
+</div>
+
+
+{% endblock %}
+

@@ -1,0 +1,46 @@
+{% extends 'base_accounts.html' %}
+{% block content %}
+<div class="container">
+    <div class="row mt-5" >
+        <div class="col-lg-2">
+
+
+
+            <!--<img src= data-toggle="popover" data-trigger="hover" data-content="Some content" class="rounded-circle float-right" style="height: 140px; width: 140px" alt="...">-->
+
+</div>
+
+        <!--<h3 class="text-center menu">{{ question.created_by }}</h3>-->
+
+
+        <div class="col-lg-8">
+
+            {% for re in result %}
+            <div class="jumbotron" style="background-color:#f4decb;">
+
+            <h2 class="menu text-right">{{ re.title }}</h2>
+            </br>
+
+                 <h3 class="text text-right">{{ re.content }}</h3>
+
+                 </div>
+
+                {% endfor %}
+
+
+
+
+
+
+
+
+        </div>
+        <div class col-lg-2></div>
+
+        <div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "dima";
+  src: url(../fonts/DimaBarf2.ttf) format("truetype");
+}
+@font-face {
+  font-family: "nazanin";
+  src: url(../fonts/BNazanin.TTF) format("truetype");
+}
+@font-face {
+  font-family: "mizan";
+  src: url(../fonts/MizanAR+LT-Regular.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "dimaclassic";
+  src: url(../fonts/Dima-Classic-Medium.ttf) format("truetype");
+}
+
+
+
+.site_title {
+  font-family: "dima", sans-serif;
+  font-size: 3rem !important;
+  font-weight: bold;
+
+}
+
+
+.menu {
+  font-family: "dimaclassic", sans-serif;
+  font-size: 1.5rem !important;
+
+
+}
+
+.title {
+  font-family: "dimaclassic", sans-serif;
+  font-size: 1.2rem !important;
+
+
+}
+
+.text {
+  font-family: "nazanin", sans-serif;
+  font-size: 1.5rem !important;
+
+
+}
+

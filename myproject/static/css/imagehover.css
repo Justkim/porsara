@@ -1,0 +1,39 @@
+.container1 {
+  position: relative;
+  width: 50%;
+}
+
+.image1 {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+.overlay1 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  width: 100px;
+
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #94618E;
+}
+
+.container1:hover .overlay1 {
+  opacity: 1;
+}
+
+.text1{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}

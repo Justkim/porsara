@@ -1,0 +1,119 @@
+{% load static %}<!DOCTYPE html>
+
+<html>
+  <head  >
+    <meta charset="utf-8">
+
+    <title>{% block title %}پرسرا{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" >
+
+
+        <link rel="stylesheet" href="{% static 'css/card.css' %}">
+     <link href="{% static 'fontawesome/css/all.css' %}" rel="stylesheet">
+      <link href="{% static 'css/fonts.css' %}" rel="stylesheet">
+        <link href="{% static 'css/imagehover.css' %}" rel="stylesheet">
+
+  <style>
+      {% block style1 %}
+      {% endblock %}
+
+
+</style>
+  </head>
+
+  <body id="grad" dir="rtl" >
+
+  {% block body %}
+
+
+
+  <div class="row"></div>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:#49274a;">
+        <a class="navbar-brand site_title " style="color: #49274a;"id="titlecircle"  href="{% url 'home' %}">پرسـرا</a>
+
+
+      <ul class="navbar-nav ml-auto " >
+
+
+    <li class="nav-item active">
+      <a class="nav-link menu ml-3" style="color: #f8eee7;" href="{% url 'add_question' %}">پرسش سوال</a>
+    </li>
+
+
+    <li class="nav-item">
+      <a class="nav-link text" href="#">درباره ی ما</a>
+    </li>
+      </ul>
+
+ <ul class="navbar-nav mr-auto" >
+           {% if user.is_authenticated %}
+
+
+<li class="nav-item dropdown mr-auto">
+          <a class="nav-link dropdown-toggle" href="#" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ user.username }}
+          </a>
+          <div class="dropdown-menu dropdown-menu-left" aria-labelledby="userMenu">
+            <!--<a class="dropdown-item" href="#">My account</a>-->
+            <!--<a class="dropdown-item" href="#">Change password</a>-->
+          
+            <a class="dropdown-item" href="{% url 'logout' %}">خروج</a>
+          </div>
+</li>
+
+
+
+
+          {% else %}
+         <li class="nav-item">
+
+    <a href="{% url 'signup' %}" class="btn btn-outline-light" >ثبت نام</a>
+                <a href="{% url 'login' %}" class="btn btn-outline-light ml-2">ورود</a>
+
+
+
+    </li>
+
+      {% endif %}
+
+                      <li class="nav-item dropdown">
+           <form class="form" method="get" action="{% url 'search' %}" novalidate >
+    <!--<input class="form-control mr-sm-2" type="search" placeholder="جستجو" aria-label="Search">-->
+                <input type="text" class="form-control" placeholder="کلیدواژه" name="name_q">
+    <button class="btn btn-outline-light" type="submit">جستجو</button>
+  </form>
+           </li>
+         </ul>
+    </nav>
+
+    <!--<div class="container">-->
+      <!--<ol class="breadcrumb my-4">-->
+        <!--{% block breadcrumb %}-->
+        <!--{% endblock %}-->
+      <!--</ol>-->
+   <!--<footer class="fixed-bottom" style="background-color: #5C246E;"><p>hi</p></footer>-->
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+
+    </div>
+
+    {% endblock body %}
+   <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+
+</div>
+</div>
+  </div>
+  </body>
+
+</html>
+
+
+ <!--#94618E-->
+
